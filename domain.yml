@@ -1,0 +1,68 @@
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - inform
+
+entities:
+  - customer_edipi
+  - customer_first_name
+  - customer_last_name
+  - customer_middle_initial
+  - customer_email
+
+slots:
+  # Chat Customer Information Storage
+  customer_first_name:
+    type: unfeaturized
+    auto_fill: true
+  customer_last_name:
+    type: unfeaturized
+    auto_fill: true
+  customer_email:
+    type: unfeaturized
+    auto_fill: true  
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_tell_first_name:
+  - text: "I now have your name as {customer_first_name}"
+
+  utter_tell_change_first_name:
+  - text: "Changing first name"
+
+  utter_tell_change_last_name:
+  - text: "Changing last name"
+    
+  utter_tell_new_customer_name:
+  - text: "Thank you, I've changed your name to {customer_first_name} {customer_last_name}"
+
+  utter_tell_new_customer_email:
+  - text: "Thank you, I've changed your email to {customer_email}"
+
+      
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
