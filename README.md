@@ -6,14 +6,17 @@ This is a fresh `rasa init` project with limited data to try to get the `inform`
 To allow the user to change their contact information conversationally.
 
 *Interaction 1*
+
 **User**: My first name is Jon
-**Rasa**: Thank you, I've changed your first name to Jon
-**Rasa**: I now have your name as Jon None
+
+**Rasa**: Thank you, I've changed your name to Jon
+
 
 *Interaction 2*
+
 **User**: My last name is Wheat
-**Rasa**: Thank you, I've changed your last name to Wheat
-**Rasa**: I now have your name as Jon Wheat
+
+**Rasa**: Thank you, I've changed your name to Jon Wheat
 
 ## My Setup in this demo
 
@@ -72,6 +75,21 @@ my last name is Franklin
       "name": "inform",
       "confidence": 0.9999760389328003
     },
+```
+
+Here's an actual `rasa shell` interaction which also displays the odd behavior
+
+```
+Your input ->  my first name Jon
+Changing first name
+Thank you, I've changed your name to Jon None
+
+Your input ->  my last name is Wheat
+Hey! How are you?
+
+Your input ->  my last name is Franklin
+Changing last name
+Thank you, I've changed your name to Jon Franklin
 ```
 
 ## My Plea
