@@ -1,4 +1,4 @@
-## What this is
+## What this is ( a plea for help)
 This is a fresh `rasa init` project with limited data to try to get the `inform` intent to work properly.  I have a [thread on the Rasa Community Forum](https://forum.rasa.com/t/inform-acting-quirky-might-it-be-my-training-data/31127) in case you found this outside of that forum post.
 
 ## My Goal
