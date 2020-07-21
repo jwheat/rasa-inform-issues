@@ -12,19 +12,17 @@ entities:
   - customer_edipi
   - customer_first_name
   - customer_last_name
-  - customer_middle_initial
-  - customer_email
 
 slots:
   # Chat Customer Information Storage
   customer_first_name:
-    type: unfeaturized
+    type: text
     auto_fill: true
   customer_last_name:
-    type: unfeaturized
+    type: text
     auto_fill: true
   customer_email:
-    type: unfeaturized
+    type: text
     auto_fill: true  
 
 responses:
